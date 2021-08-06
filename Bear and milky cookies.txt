@@ -1,0 +1,15 @@
+for _ in range(int(input())):
+    n = int(input())
+    activity = input().split()
+
+    ans = "YES"
+    if activity[-1] == "cookie":
+        ans = "NO"
+    else:
+        for i in range(n-1):
+            if activity[i] == "cookie":
+                if activity[i+1] != "milk":
+                    ans = "NO"
+                    break
+
+    print(ans)
